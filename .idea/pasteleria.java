@@ -13,10 +13,10 @@ public class Pasteleria {
     public static void main(String[] args) {
         System.out.println("Hello World!");
         // Crear una instancia del JFrame que deseas llamar
-        Principal Principal = new Principal();
-
+        principal Abrir = new principal();
+    
         // Mostrar el JFrame
-        Principal.setVisible(true);
+        Abrir.setVisible(true);
 
     }
 }
