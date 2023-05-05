@@ -29,11 +29,13 @@ public class principal extends javax.swing.JFrame {
         jLabel1 = new javax.swing.JLabel();
         jPanel1 = new javax.swing.JPanel();
         Eliminar_Reseta = new javax.swing.JButton();
-        Ver_recetas = new javax.swing.JButton();
+        Soporte = new javax.swing.JButton();
         jLabel2 = new javax.swing.JLabel();
         Añadire_reseta = new javax.swing.JButton();
         jLabel3 = new javax.swing.JLabel();
         jLabel4 = new javax.swing.JLabel();
+        Ver_recetas1 = new javax.swing.JButton();
+        jLabel5 = new javax.swing.JLabel();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
 
@@ -53,13 +55,13 @@ public class principal extends javax.swing.JFrame {
             }
         });
 
-        Ver_recetas.setBackground(new java.awt.Color(153, 0, 0));
-        Ver_recetas.setFont(new java.awt.Font("Segoe UI", 0, 48)); // NOI18N
-        Ver_recetas.setForeground(new java.awt.Color(255, 153, 153));
-        Ver_recetas.setText("VER RECETAS");
-        Ver_recetas.addActionListener(new java.awt.event.ActionListener() {
+        Soporte.setBackground(new java.awt.Color(153, 0, 0));
+        Soporte.setFont(new java.awt.Font("Segoe UI", 0, 48)); // NOI18N
+        Soporte.setForeground(new java.awt.Color(255, 153, 153));
+        Soporte.setText("SOPORTE");
+        Soporte.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                Ver_recetasActionPerformed(evt);
+                SoporteActionPerformed(evt);
             }
         });
 
@@ -79,53 +81,76 @@ public class principal extends javax.swing.JFrame {
 
         jLabel4.setIcon(new javax.swing.ImageIcon(getClass().getResource("/pastleria/pasteleria2/imagenes/eliminar (1).png"))); // NOI18N
 
+        Ver_recetas1.setBackground(new java.awt.Color(153, 0, 0));
+        Ver_recetas1.setFont(new java.awt.Font("Segoe UI", 0, 48)); // NOI18N
+        Ver_recetas1.setForeground(new java.awt.Color(255, 153, 153));
+        Ver_recetas1.setText("VER RECETAS");
+        Ver_recetas1.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                Ver_recetas1ActionPerformed(evt);
+            }
+        });
+
+        jLabel5.setIcon(new javax.swing.ImageIcon(getClass().getResource("/pastleria/pasteleria2/imagenes/soporte-tecnico (1).png"))); // NOI18N
+
         javax.swing.GroupLayout jPanel1Layout = new javax.swing.GroupLayout(jPanel1);
         jPanel1.setLayout(jPanel1Layout);
         jPanel1Layout.setHorizontalGroup(
             jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel1Layout.createSequentialGroup()
-                .addGap(82, 82, 82)
-                .addComponent(jLabel2)
-                .addGap(18, 18, 18)
-                .addComponent(Ver_recetas)
-                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
             .addGroup(jPanel1Layout.createSequentialGroup()
                 .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addGroup(jPanel1Layout.createSequentialGroup()
                         .addGap(82, 82, 82)
-                        .addComponent(jLabel3))
+                        .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                            .addComponent(jLabel3)
+                            .addComponent(jLabel2)))
                     .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel1Layout.createSequentialGroup()
                         .addContainerGap()
-                        .addComponent(jLabel4)))
+                        .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
+                            .addComponent(jLabel5)
+                            .addComponent(jLabel4))
+                        .addGap(17, 17, 17)))
                 .addGap(18, 18, 18)
                 .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addComponent(Soporte)
                     .addComponent(Añadire_reseta)
                     .addComponent(Eliminar_Reseta))
-                .addGap(0, 13, Short.MAX_VALUE))
+                .addGap(0, 181, Short.MAX_VALUE))
+            .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                .addGroup(jPanel1Layout.createSequentialGroup()
+                    .addGap(260, 260, 260)
+                    .addComponent(Ver_recetas1)
+                    .addContainerGap(284, Short.MAX_VALUE)))
         );
         jPanel1Layout.setVerticalGroup(
             jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel1Layout.createSequentialGroup()
+                .addGap(26, 26, 26)
+                .addComponent(jLabel2, javax.swing.GroupLayout.PREFERRED_SIZE, 110, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addGroup(jPanel1Layout.createSequentialGroup()
-                        .addGap(26, 26, 26)
-                        .addComponent(jLabel2, javax.swing.GroupLayout.PREFERRED_SIZE, 110, javax.swing.GroupLayout.PREFERRED_SIZE))
-                    .addGroup(jPanel1Layout.createSequentialGroup()
-                        .addGap(56, 56, 56)
-                        .addComponent(Ver_recetas, javax.swing.GroupLayout.PREFERRED_SIZE, 63, javax.swing.GroupLayout.PREFERRED_SIZE)))
-                .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addGroup(jPanel1Layout.createSequentialGroup()
-                        .addGap(45, 45, 45)
-                        .addComponent(jLabel3)
-                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 17, Short.MAX_VALUE)
-                        .addComponent(jLabel4))
                     .addGroup(jPanel1Layout.createSequentialGroup()
                         .addGap(87, 87, 87)
                         .addComponent(Añadire_reseta)
                         .addGap(110, 110, 110)
-                        .addComponent(Eliminar_Reseta)
-                        .addGap(0, 0, Short.MAX_VALUE)))
-                .addGap(72, 72, 72))
+                        .addComponent(Eliminar_Reseta))
+                    .addGroup(jPanel1Layout.createSequentialGroup()
+                        .addGap(45, 45, 45)
+                        .addComponent(jLabel3)
+                        .addGap(18, 18, 18)
+                        .addComponent(jLabel4)))
+                .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addGroup(jPanel1Layout.createSequentialGroup()
+                        .addGap(29, 29, 29)
+                        .addComponent(jLabel5))
+                    .addGroup(jPanel1Layout.createSequentialGroup()
+                        .addGap(60, 60, 60)
+                        .addComponent(Soporte, javax.swing.GroupLayout.PREFERRED_SIZE, 63, javax.swing.GroupLayout.PREFERRED_SIZE)))
+                .addContainerGap(71, Short.MAX_VALUE))
+            .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                .addGroup(jPanel1Layout.createSequentialGroup()
+                    .addGap(66, 66, 66)
+                    .addComponent(Ver_recetas1, javax.swing.GroupLayout.PREFERRED_SIZE, 63, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addContainerGap(461, Short.MAX_VALUE)))
         );
 
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
@@ -137,7 +162,7 @@ public class principal extends javax.swing.JFrame {
                 .addGroup(layout.createSequentialGroup()
                     .addContainerGap()
                     .addComponent(jLabel1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addContainerGap(685, Short.MAX_VALUE)))
+                    .addContainerGap(853, Short.MAX_VALUE)))
         );
         layout.setVerticalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
@@ -148,7 +173,7 @@ public class principal extends javax.swing.JFrame {
                 .addGroup(layout.createSequentialGroup()
                     .addContainerGap()
                     .addComponent(jLabel1, javax.swing.GroupLayout.PREFERRED_SIZE, 84, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addContainerGap(506, Short.MAX_VALUE)))
+                    .addContainerGap(663, Short.MAX_VALUE)))
         );
 
         pack();
@@ -156,15 +181,17 @@ public class principal extends javax.swing.JFrame {
 
     private void Eliminar_ResetaActionPerformed(java.awt.event.ActionEvent evt) {                                                
         // TODO add your handling code here:
-        
-    }                                               
-
-    private void Ver_recetasActionPerformed(java.awt.event.ActionEvent evt) {                                            
-        // TODO add your handling code here:
-        Registros_resetas Abrir = new Registros_resetas();
+        Eliminar_receta Abrir = new Eliminar_receta();
         Abrir.setVisible(true);
         this.setVisible(false);
-    }                                           
+    }                                               
+
+    private void SoporteActionPerformed(java.awt.event.ActionEvent evt) {                                        
+        // TODO add your handling code here:
+        Soporte Abrir = new Soporte();
+        Abrir.setVisible(true);
+        this.setVisible(false);
+    }                                       
 
     private void Añadire_resetaActionPerformed(java.awt.event.ActionEvent evt) {                                               
         // TODO add your handling code here:
@@ -172,6 +199,13 @@ public class principal extends javax.swing.JFrame {
         Abrir.setVisible(true);
         this.setVisible(false);
     }                                              
+
+    private void Ver_recetas1ActionPerformed(java.awt.event.ActionEvent evt) {                                             
+        // TODO add your handling code here:
+        Registros_resetas Abrir = new Registros_resetas();
+        Abrir.setVisible(true);
+        this.setVisible(false);
+    }                                            
 
     /**
      * @param args the command line arguments
@@ -211,12 +245,13 @@ public class principal extends javax.swing.JFrame {
     // Variables declaration - do not modify                     
     private javax.swing.JButton Añadire_reseta;
     private javax.swing.JButton Eliminar_Reseta;
-    private javax.swing.JButton Ver_recetas;
+    private javax.swing.JButton Soporte;
+    private javax.swing.JButton Ver_recetas1;
     private javax.swing.JLabel jLabel1;
     private javax.swing.JLabel jLabel2;
     private javax.swing.JLabel jLabel3;
     private javax.swing.JLabel jLabel4;
+    private javax.swing.JLabel jLabel5;
     private javax.swing.JPanel jPanel1;
     // End of variables declaration                   
 }
-
