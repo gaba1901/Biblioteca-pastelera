@@ -2,19 +2,20 @@
  * Click nbfs://nbhost/SystemFileSystem/Templates/Licenses/license-default.txt to change this license
  * Click nbfs://nbhost/SystemFileSystem/Templates/GUIForms/JFrame.java to edit this template
  */
-package guaba.pasteleria;
-
 /**
  *
  * @author wava1
  */
+
 public class principal extends javax.swing.JFrame {
 
     /**
      * Creates new form principal
      */
+    
     public principal() {
         initComponents();
+        setLocationRelativeTo(null);
     }
 
     /**

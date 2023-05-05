@@ -3,7 +3,10 @@
  * Click nbfs://nbhost/SystemFileSystem/Templates/GUIForms/JFrame.java to edit this template
  */
 
+ package guaba.pasteleria;
 
+ import javax.swing.JOptionPane;
+ 
  /**
   *
   * @author wava1
@@ -13,6 +16,7 @@
      /** Creates new form Añadir_reseta */
      public Añadir_reseta() {
          initComponents();
+         setLocationRelativeTo(null);
      }
  
      /** This method is called from within the constructor to
@@ -26,22 +30,22 @@
  
          jPanel1 = new javax.swing.JPanel();
          jLabel1 = new javax.swing.JLabel();
-         jTextField1 = new javax.swing.JTextField();
+         Nombre_de_la_receta = new javax.swing.JTextField();
          Gramos = new javax.swing.JLabel();
          jLabel2 = new javax.swing.JLabel();
-         jTextField2 = new javax.swing.JTextField();
+         Realizdo_por = new javax.swing.JTextField();
          jLabel3 = new javax.swing.JLabel();
-         jTextField3 = new javax.swing.JTextField();
-         jTextField4 = new javax.swing.JTextField();
+         Harina = new javax.swing.JTextField();
+         Agua = new javax.swing.JTextField();
          jLabel4 = new javax.swing.JLabel();
          jLabel5 = new javax.swing.JLabel();
-         jTextField5 = new javax.swing.JTextField();
+         Gelatina = new javax.swing.JTextField();
          jLabel6 = new javax.swing.JLabel();
-         jTextField6 = new javax.swing.JTextField();
+         Mantequilla = new javax.swing.JTextField();
          jLabel7 = new javax.swing.JLabel();
-         jTextField7 = new javax.swing.JTextField();
+         Polco_para_hornear = new javax.swing.JTextField();
          jLabel8 = new javax.swing.JLabel();
-         jTextField8 = new javax.swing.JTextField();
+         Crema_de_leche = new javax.swing.JTextField();
          Guardar = new javax.swing.JButton();
          Volver_principal = new javax.swing.JButton();
  
@@ -54,7 +58,9 @@
          jLabel1.setForeground(new java.awt.Color(255, 255, 255));
          jLabel1.setText("Nombre de la reseta:");
  
-         jTextField1.setBackground(new java.awt.Color(153, 0, 0));
+         Nombre_de_la_receta.setBackground(new java.awt.Color(153, 0, 0));
+         Nombre_de_la_receta.setFont(new java.awt.Font("Segoe UI", 0, 18)); // NOI18N
+         Nombre_de_la_receta.setForeground(new java.awt.Color(255, 255, 255));
  
          Gramos.setBackground(new java.awt.Color(51, 153, 0));
          Gramos.setFont(new java.awt.Font("Segoe UI", 0, 36)); // NOI18N
@@ -65,15 +71,21 @@
          jLabel2.setForeground(new java.awt.Color(51, 204, 255));
          jLabel2.setText("Harina");
  
-         jTextField2.setBackground(new java.awt.Color(153, 0, 0));
+         Realizdo_por.setBackground(new java.awt.Color(153, 0, 0));
+         Realizdo_por.setFont(new java.awt.Font("Segoe UI", 0, 18)); // NOI18N
+         Realizdo_por.setForeground(new java.awt.Color(242, 242, 242));
  
          jLabel3.setFont(new java.awt.Font("Segoe UI", 0, 24)); // NOI18N
          jLabel3.setForeground(new java.awt.Color(51, 204, 255));
          jLabel3.setText("Mantequilla");
  
-         jTextField3.setBackground(new java.awt.Color(153, 0, 0));
+         Harina.setBackground(new java.awt.Color(153, 0, 0));
+         Harina.setFont(new java.awt.Font("Segoe UI", 0, 18)); // NOI18N
+         Harina.setForeground(new java.awt.Color(242, 242, 242));
  
-         jTextField4.setBackground(new java.awt.Color(153, 0, 0));
+         Agua.setBackground(new java.awt.Color(153, 0, 0));
+         Agua.setFont(new java.awt.Font("Segoe UI", 0, 18)); // NOI18N
+         Agua.setForeground(new java.awt.Color(242, 242, 242));
  
          jLabel4.setFont(new java.awt.Font("Segoe UI", 0, 24)); // NOI18N
          jLabel4.setForeground(new java.awt.Color(51, 204, 255));
@@ -83,30 +95,53 @@
          jLabel5.setForeground(new java.awt.Color(51, 204, 255));
          jLabel5.setText("P_P hornear");
  
-         jTextField5.setBackground(new java.awt.Color(153, 0, 0));
+         Gelatina.setBackground(new java.awt.Color(153, 0, 0));
+         Gelatina.setFont(new java.awt.Font("Segoe UI", 0, 18)); // NOI18N
+         Gelatina.setForeground(new java.awt.Color(242, 242, 242));
+         Gelatina.addActionListener(new java.awt.event.ActionListener() {
+             public void actionPerformed(java.awt.event.ActionEvent evt) {
+                 GelatinaActionPerformed(evt);
+             }
+         });
  
          jLabel6.setFont(new java.awt.Font("Segoe UI", 0, 24)); // NOI18N
          jLabel6.setForeground(new java.awt.Color(51, 204, 255));
          jLabel6.setText("Realiazo por:");
  
-         jTextField6.setBackground(new java.awt.Color(153, 0, 0));
+         Mantequilla.setBackground(new java.awt.Color(153, 0, 0));
+         Mantequilla.setFont(new java.awt.Font("Segoe UI", 0, 18)); // NOI18N
+         Mantequilla.setForeground(new java.awt.Color(242, 242, 242));
  
          jLabel7.setFont(new java.awt.Font("Segoe UI", 0, 24)); // NOI18N
          jLabel7.setForeground(new java.awt.Color(51, 204, 255));
          jLabel7.setText("Gelatina");
  
-         jTextField7.setBackground(new java.awt.Color(153, 0, 0));
+         Polco_para_hornear.setBackground(new java.awt.Color(153, 0, 0));
+         Polco_para_hornear.setFont(new java.awt.Font("Segoe UI", 0, 18)); // NOI18N
+         Polco_para_hornear.setForeground(new java.awt.Color(242, 242, 242));
  
          jLabel8.setFont(new java.awt.Font("Segoe UI", 0, 24)); // NOI18N
          jLabel8.setForeground(new java.awt.Color(51, 204, 255));
          jLabel8.setText("C_D leche");
  
-         jTextField8.setBackground(new java.awt.Color(153, 0, 0));
+         Crema_de_leche.setBackground(new java.awt.Color(153, 0, 0));
+         Crema_de_leche.setFont(new java.awt.Font("Segoe UI", 0, 18)); // NOI18N
+         Crema_de_leche.setForeground(new java.awt.Color(242, 242, 242));
+         Crema_de_leche.addActionListener(new java.awt.event.ActionListener() {
+             public void actionPerformed(java.awt.event.ActionEvent evt) {
+                 Crema_de_lecheActionPerformed(evt);
+             }
+         });
  
-         Guardar.setBackground(new java.awt.Color(153, 0, 0));
+         Guardar.setBackground(new java.awt.Color(0, 153, 204));
          Guardar.setFont(new java.awt.Font("Segoe UI", 0, 48)); // NOI18N
-         Guardar.setForeground(new java.awt.Color(255, 153, 153));
+         Guardar.setForeground(new java.awt.Color(242, 242, 242));
          Guardar.setText("Guardar");
+         Guardar.addActionListener(new java.awt.event.ActionListener() {
+             public void actionPerformed(java.awt.event.ActionEvent evt) {
+                 GuardarActionPerformed(evt);
+             }
+         });
  
          Volver_principal.setBackground(new java.awt.Color(153, 0, 0));
          Volver_principal.setFont(new java.awt.Font("Segoe UI", 0, 48)); // NOI18N
@@ -143,11 +178,11 @@
                                                  .addComponent(jLabel4, javax.swing.GroupLayout.PREFERRED_SIZE, 111, javax.swing.GroupLayout.PREFERRED_SIZE))
                                              .addGap(18, 18, 18)
                                              .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                                                 .addComponent(jTextField3, javax.swing.GroupLayout.PREFERRED_SIZE, 201, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                                 .addComponent(jTextField4, javax.swing.GroupLayout.PREFERRED_SIZE, 201, javax.swing.GroupLayout.PREFERRED_SIZE))))
+                                                 .addComponent(Harina, javax.swing.GroupLayout.PREFERRED_SIZE, 201, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                                 .addComponent(Agua, javax.swing.GroupLayout.PREFERRED_SIZE, 201, javax.swing.GroupLayout.PREFERRED_SIZE))))
                                      .addGroup(jPanel1Layout.createSequentialGroup()
                                          .addGap(173, 173, 173)
-                                         .addComponent(jTextField7, javax.swing.GroupLayout.PREFERRED_SIZE, 167, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                         .addComponent(Polco_para_hornear, javax.swing.GroupLayout.PREFERRED_SIZE, 167, javax.swing.GroupLayout.PREFERRED_SIZE)
                                          .addGap(74, 74, 74)))
                                  .addGap(38, 38, 38)
                                  .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
@@ -155,12 +190,12 @@
                                      .addComponent(jLabel7))
                                  .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                                  .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                                     .addComponent(jTextField5, javax.swing.GroupLayout.PREFERRED_SIZE, 167, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                     .addComponent(jTextField6, javax.swing.GroupLayout.PREFERRED_SIZE, 167, javax.swing.GroupLayout.PREFERRED_SIZE)))
+                                     .addComponent(Gelatina, javax.swing.GroupLayout.PREFERRED_SIZE, 167, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                     .addComponent(Mantequilla, javax.swing.GroupLayout.PREFERRED_SIZE, 167, javax.swing.GroupLayout.PREFERRED_SIZE)))
                              .addGroup(jPanel1Layout.createSequentialGroup()
                                  .addComponent(jLabel1, javax.swing.GroupLayout.PREFERRED_SIZE, 346, javax.swing.GroupLayout.PREFERRED_SIZE)
                                  .addGap(18, 18, 18)
-                                 .addComponent(jTextField1, javax.swing.GroupLayout.PREFERRED_SIZE, 201, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                 .addComponent(Nombre_de_la_receta, javax.swing.GroupLayout.PREFERRED_SIZE, 201, javax.swing.GroupLayout.PREFERRED_SIZE)
                                  .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
                                  .addComponent(Volver_principal)
                                  .addGap(19, 19, 19))))
@@ -168,7 +203,7 @@
                          .addGap(52, 52, 52)
                          .addComponent(jLabel6, javax.swing.GroupLayout.PREFERRED_SIZE, 167, javax.swing.GroupLayout.PREFERRED_SIZE)
                          .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
-                         .addComponent(jTextField2, javax.swing.GroupLayout.PREFERRED_SIZE, 167, javax.swing.GroupLayout.PREFERRED_SIZE)
+                         .addComponent(Realizdo_por, javax.swing.GroupLayout.PREFERRED_SIZE, 167, javax.swing.GroupLayout.PREFERRED_SIZE)
                          .addGap(123, 123, 123)
                          .addComponent(Guardar, javax.swing.GroupLayout.PREFERRED_SIZE, 230, javax.swing.GroupLayout.PREFERRED_SIZE)))
                  .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
@@ -180,7 +215,7 @@
              .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                  .addGroup(jPanel1Layout.createSequentialGroup()
                      .addGap(205, 205, 205)
-                     .addComponent(jTextField8, javax.swing.GroupLayout.PREFERRED_SIZE, 167, javax.swing.GroupLayout.PREFERRED_SIZE)
+                     .addComponent(Crema_de_leche, javax.swing.GroupLayout.PREFERRED_SIZE, 167, javax.swing.GroupLayout.PREFERRED_SIZE)
                      .addContainerGap(394, Short.MAX_VALUE)))
          );
          jPanel1Layout.setVerticalGroup(
@@ -190,21 +225,21 @@
                  .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                      .addGroup(jPanel1Layout.createSequentialGroup()
                          .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
-                             .addComponent(jTextField1, javax.swing.GroupLayout.PREFERRED_SIZE, 37, javax.swing.GroupLayout.PREFERRED_SIZE)
+                             .addComponent(Nombre_de_la_receta, javax.swing.GroupLayout.PREFERRED_SIZE, 37, javax.swing.GroupLayout.PREFERRED_SIZE)
                              .addComponent(jLabel1))
                          .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
                          .addComponent(Gramos)
                          .addGap(31, 31, 31)
                          .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                              .addComponent(jLabel2)
-                             .addComponent(jTextField3, javax.swing.GroupLayout.PREFERRED_SIZE, 37, javax.swing.GroupLayout.PREFERRED_SIZE)))
+                             .addComponent(Harina, javax.swing.GroupLayout.PREFERRED_SIZE, 37, javax.swing.GroupLayout.PREFERRED_SIZE)))
                      .addGroup(jPanel1Layout.createSequentialGroup()
                          .addComponent(Volver_principal, javax.swing.GroupLayout.PREFERRED_SIZE, 59, javax.swing.GroupLayout.PREFERRED_SIZE)
-                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 4, Short.MAX_VALUE)
                          .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                              .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel1Layout.createSequentialGroup()
                                  .addGap(84, 84, 84)
-                                 .addComponent(jTextField6, javax.swing.GroupLayout.PREFERRED_SIZE, 37, javax.swing.GroupLayout.PREFERRED_SIZE))
+                                 .addComponent(Mantequilla, javax.swing.GroupLayout.PREFERRED_SIZE, 37, javax.swing.GroupLayout.PREFERRED_SIZE))
                              .addGroup(jPanel1Layout.createSequentialGroup()
                                  .addGap(89, 89, 89)
                                  .addComponent(jLabel3)))))
@@ -212,26 +247,26 @@
                      .addGroup(jPanel1Layout.createSequentialGroup()
                          .addGap(18, 18, 18)
                          .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                             .addComponent(jTextField4, javax.swing.GroupLayout.PREFERRED_SIZE, 37, javax.swing.GroupLayout.PREFERRED_SIZE)
+                             .addComponent(Agua, javax.swing.GroupLayout.PREFERRED_SIZE, 37, javax.swing.GroupLayout.PREFERRED_SIZE)
                              .addComponent(jLabel4)))
                      .addGroup(jPanel1Layout.createSequentialGroup()
                          .addGap(27, 27, 27)
                          .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                              .addComponent(jLabel7)
-                             .addComponent(jTextField5, javax.swing.GroupLayout.PREFERRED_SIZE, 37, javax.swing.GroupLayout.PREFERRED_SIZE))))
+                             .addComponent(Gelatina, javax.swing.GroupLayout.PREFERRED_SIZE, 37, javax.swing.GroupLayout.PREFERRED_SIZE))))
                  .addGap(18, 18, 18)
                  .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                      .addComponent(jLabel5)
-                     .addComponent(jTextField7, javax.swing.GroupLayout.PREFERRED_SIZE, 37, javax.swing.GroupLayout.PREFERRED_SIZE))
+                     .addComponent(Polco_para_hornear, javax.swing.GroupLayout.PREFERRED_SIZE, 37, javax.swing.GroupLayout.PREFERRED_SIZE))
                  .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                      .addGroup(jPanel1Layout.createSequentialGroup()
                          .addGap(88, 88, 88)
                          .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
                              .addComponent(jLabel6)
-                             .addComponent(jTextField2, javax.swing.GroupLayout.PREFERRED_SIZE, 37, javax.swing.GroupLayout.PREFERRED_SIZE))
+                             .addComponent(Realizdo_por, javax.swing.GroupLayout.PREFERRED_SIZE, 37, javax.swing.GroupLayout.PREFERRED_SIZE))
                          .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
                      .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel1Layout.createSequentialGroup()
-                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 33, Short.MAX_VALUE)
+                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 35, Short.MAX_VALUE)
                          .addComponent(Guardar, javax.swing.GroupLayout.PREFERRED_SIZE, 101, javax.swing.GroupLayout.PREFERRED_SIZE)
                          .addGap(50, 50, 50))))
              .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
@@ -242,7 +277,7 @@
              .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                  .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel1Layout.createSequentialGroup()
                      .addContainerGap(358, Short.MAX_VALUE)
-                     .addComponent(jTextField8, javax.swing.GroupLayout.PREFERRED_SIZE, 37, javax.swing.GroupLayout.PREFERRED_SIZE)
+                     .addComponent(Crema_de_leche, javax.swing.GroupLayout.PREFERRED_SIZE, 37, javax.swing.GroupLayout.PREFERRED_SIZE)
                      .addGap(119, 119, 119)))
          );
  
@@ -266,6 +301,19 @@
          Abrir.setVisible(true);
          this.setVisible(false);
      }                                                
+ 
+     private void GuardarActionPerformed(java.awt.event.ActionEvent evt) {                                        
+         // TODO add your handling code here:
+         JOptionPane.showMessageDialog(this, "Se guardo con exito");
+     }                                       
+ 
+     private void Crema_de_lecheActionPerformed(java.awt.event.ActionEvent evt) {                                               
+         // TODO add your handling code here:
+     }                                              
+ 
+     private void GelatinaActionPerformed(java.awt.event.ActionEvent evt) {                                         
+         // TODO add your handling code here:
+     }                                        
  
      /**
       * @param args the command line arguments
@@ -303,8 +351,16 @@
      }
  
      // Variables declaration - do not modify                     
+     private javax.swing.JTextField Agua;
+     private javax.swing.JTextField Crema_de_leche;
+     private javax.swing.JTextField Gelatina;
      private javax.swing.JLabel Gramos;
      private javax.swing.JButton Guardar;
+     private javax.swing.JTextField Harina;
+     private javax.swing.JTextField Mantequilla;
+     private javax.swing.JTextField Nombre_de_la_receta;
+     private javax.swing.JTextField Polco_para_hornear;
+     private javax.swing.JTextField Realizdo_por;
      private javax.swing.JButton Volver_principal;
      private javax.swing.JLabel jLabel1;
      private javax.swing.JLabel jLabel2;
@@ -315,14 +371,6 @@
      private javax.swing.JLabel jLabel7;
      private javax.swing.JLabel jLabel8;
      private javax.swing.JPanel jPanel1;
-     private javax.swing.JTextField jTextField1;
-     private javax.swing.JTextField jTextField2;
-     private javax.swing.JTextField jTextField3;
-     private javax.swing.JTextField jTextField4;
-     private javax.swing.JTextField jTextField5;
-     private javax.swing.JTextField jTextField6;
-     private javax.swing.JTextField jTextField7;
-     private javax.swing.JTextField jTextField8;
      // End of variables declaration                   
  
  }
