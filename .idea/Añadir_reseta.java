@@ -3,8 +3,6 @@
  * Click nbfs://nbhost/SystemFileSystem/Templates/GUIForms/JFrame.java to edit this template
  */
 
- package guaba.pasteleria;
-
  import javax.swing.JOptionPane;
  
  /**
